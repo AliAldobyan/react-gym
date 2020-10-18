@@ -27,8 +27,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="row">
-        <div className="content col-6">{getView()}</div>
+
+      <div className="container">
+        <div>{getView()}</div>
       </div>
     </div>
   );
