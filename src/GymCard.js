@@ -9,7 +9,7 @@ const GymCard = ({ gym }) => {
           <img
             className="card-img-top img-fluid"
             src={gym.imageUrl}
-            alt={gym.name}
+            //alt={gym.name}
           />
         </div>
         <div className="card-body">

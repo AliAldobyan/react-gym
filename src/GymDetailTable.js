@@ -7,7 +7,7 @@ const GymDetailTable = ({ gym }) => {
     <GymRow key={gym.title} gymClass={gymClass} />
   ));
   return (
-    <table className="mt-3 table">
+    <table className="mt-3 table table-dark mt-5">
       <thead>
         <tr>
           <th>Title</th>
