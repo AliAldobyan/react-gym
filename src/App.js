@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+
+// Components
+import Navbar from "./Navbar";
+import GymsList from "./GymsList";
+import GymDetail from "./GymDetail";
 
 function App() {
+  const getView = () => {
+    // if (props.loading) {
+    //   return <Loading />;
+    // } else {
+    return (
+      <Switch>
+        <Redirect exact from="/" to="/gyms" />
+        <Route path="/gyms/:gymID">
+          <GymDetail />
+        </Route>
+        <Route path="/gyms/">
+          <GymsList />
+        </Route>
+      </Switch>
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="row">
+        <div className="content col-6">{getView()}</div>
+      </div>
     </div>
   );
 }

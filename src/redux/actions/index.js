@@ -1,0 +1,1 @@
+export { fetchGyms } from "./gyms";
