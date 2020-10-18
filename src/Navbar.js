@@ -1,11 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/">
-        Gyms
+      <a className="navbar-brand">
+        <NavLink to="/gyms">Gyms</NavLink>
       </a>
+
       <button
         className="navbar-toggler"
         type="button"
