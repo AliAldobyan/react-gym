@@ -1,8 +1,8 @@
 import { SET_GYMS } from "../actions/actionType";
-import gyms from "../../data.js";
+//import gyms from "../../data.js";
 
 const initialState = {
-  gyms: gyms,
+  gyms: [],
 };
 
 export default (state = initialState, action) => {
@@ -10,6 +10,7 @@ export default (state = initialState, action) => {
     case SET_GYMS:
       return {
         ...state,
+        gyms: action.payload,
       };
     default:
       return state;

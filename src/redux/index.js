@@ -1,7 +1,5 @@
-import { createStore, combineReducers } from "redux";
-import { applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import { compose } from "redux";
 import { fetchGyms } from "./actions";
 import gymReducer from "./reducers/gyms.js";
 
