@@ -5,6 +5,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./Navbar";
 import GymsList from "./GymsList";
 import GymDetail from "./GymDetail";
+import Signup from "./SignupForm";
+import Login from "./LoginForm";
 
 function App() {
   const getView = () => {
@@ -19,6 +21,12 @@ function App() {
         </Route>
         <Route path="/gyms/">
           <GymsList />
+        </Route>
+        <Route path="/signup/">
+          <Signup />
+        </Route>
+        <Route path="/login/">
+          <Login />
         </Route>
       </Switch>
     );

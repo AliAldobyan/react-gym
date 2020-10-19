@@ -1,4 +1,4 @@
-import { SET_CURRENT_USER } from "../actions/actionTypes";
+import { SET_CURRENT_USER } from "../actions/actionType";
 
 const initialState = null;
 

@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const Navbar = () => {
   return (
@@ -27,10 +28,22 @@ const Navbar = () => {
               Home <span className="sr-only">(current)</span>
             </a>
           </li>
+          <li className="nav-item active">
+            <Link to="/signup" className="btn btn-success m-2 float-left">
+              Signup
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="/login" className="btn btn-success m-2 float-left">
+              Login
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+const mapStateToProps = ({ user }) => ({ user });
+
+export default connect(mapStateToProps)(Navbar);

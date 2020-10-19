@@ -1,13 +1,15 @@
 import decode from "jwt-decode";
 import instance from "./instance";
-import { SET_CURRENT_USER } from "./actionTypes";
+import { SET_CURRENT_USER } from "./actionType";
 import Cookies from "js-cookie";
 
 export const login = (userData) => {
   return async (dispatch) => {
     try {
-      const response = await instance.post("/api-login/", userData);
+      const response = await instance.post("api/login/", userData);
+      console.log(`RESPONSE ${response}`);
       const { token } = response.data;
+      console.log(`TOKEN ${token}`);
       dispatch(setCurrentUser(token));
     } catch (error) {
       console.error(error);
@@ -32,7 +34,7 @@ export const logout = () => setCurrentUser();
 const setAuthToken = (token) => {
   if (token) {
     Cookies.set("token", token);
-    instance.defaults.headers.Authorization = `jwt ${token}`;
+    instance.defaults.headers.Authorization = `Bearer ${token}`;
   } else {
     delete instance.defaults.headers.Authorization;
     Cookies.remove("token");

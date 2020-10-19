@@ -8,8 +8,8 @@ const GymCard = ({ gym }) => {
         <div className="image">
           <img
             className="card-img-top img-fluid"
-            src={gym.imageUrl}
-            //alt={gym.name}
+            src={gym.image}
+            alt={gym.name}
           />
         </div>
         <div className="card-body">

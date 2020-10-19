@@ -1,4 +1,4 @@
-import { SET_BOOKINGS, BOOKING, CANCEL } from "./actionTypes";
+import { SET_BOOKINGS, BOOKING, CANCEL } from "./actionType";
 import instance from "./instance";
 
 export const fetchBookings = () => async (dispatch) => {
