@@ -38,7 +38,25 @@ function App() {
 
   return (
     <div>
+      <head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <title>RALISh</title>
+
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+        <link href="css/full-width-pics.css" rel="stylesheet" />
+      </head>
+
       <Navbar />
+      <br />
+      <br />
 
       <div className="container">
         <div>{getView()}</div>

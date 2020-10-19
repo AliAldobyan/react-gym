@@ -19,8 +19,17 @@ const GymList = ({ gyms }) => {
 
   return (
     <div className="container">
-      <h3>Gyms</h3>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="p-3 mb-2 bg-dark text-white">
+        <h3 class="d-flex justify-content-center">Gyms</h3>
+      </div>
+      <br></br>
       <SearchBar onChange={setQuery} />
+
       <div className="row">{gymCards}</div>
     </div>
   );
