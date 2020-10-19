@@ -1,2 +1,2 @@
-export { fetchGyms } from "./gyms";
+export { fetchGyms, addGym } from "./gyms";
 export { signup, login } from "./authentication";

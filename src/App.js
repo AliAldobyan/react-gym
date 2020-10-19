@@ -7,6 +7,7 @@ import GymsList from "./GymsList";
 import GymDetail from "./GymDetail";
 import Signup from "./SignupForm";
 import Login from "./LoginForm";
+import GymCreate from "./GymCreate";
 
 function App() {
   const getView = () => {
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/login/">
           <Login />
+        </Route>
+        <Route path="/gym/create/">
+          <GymCreate />
         </Route>
       </Switch>
     );

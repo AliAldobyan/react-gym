@@ -1,4 +1,4 @@
-import { SET_GYMS } from "../actions/actionType";
+import { SET_GYMS, ADD_GYM } from "../actions/actionType";
 //import gyms from "../../data.js";
 
 const initialState = {
@@ -12,6 +12,9 @@ export default (state = initialState, action) => {
         ...state,
         gyms: action.payload,
       };
+    case ADD_GYM:
+      const newGym = action.payload;
+      return [newGym, ...state];
     default:
       return state;
   }
