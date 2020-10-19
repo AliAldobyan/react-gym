@@ -4,10 +4,12 @@ import { connect } from "react-redux";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand">
-        <NavLink to="/gyms">Gyms</NavLink>
-      </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <NavLink to="/gyms">Gyms</NavLink>
+        </a>
+      </div>
 
       <button
         className="navbar-toggler"
